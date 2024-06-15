@@ -1,6 +1,4 @@
-<h1 id="gore-driver">
-    Gore driver
-</h1>
+# Gore driver
 
 Создает /dev/gore устройство
 
@@ -12,55 +10,42 @@
 
 Пулл реквесты приветствуются
 
-<h3 id="include-to-kernel">
-    Сборка
-<h3>
+### Сборка
 
 ```shell
 make
 ```
-<h3 id="include-to-kernel">
-    Инклюд в ядро
-</h3>
+### Инклюд в ядро
 
 В папке с ядром
 
 ```shell
-curl -LSs "https://raw.githubusercontent.com/nedokaka/linux-gore-driver/main/kernel/kernel-include.sh" | bash
+curl -LSs "https://raw.githubusercontent.com/nedokaka/linux-gore-driver/main/linux/kernel-include.sh" | bash
 ```
 
-<h3 id="instoll">
-    Временно (до перезагрузки)
-<h3>
+### Хау ту инсталл
 
-<h4 id="instoll-1">
-    Хау ту инсталл
-<h4>
+#### Временно (до перезагрузки)
 
 ```shell
 make install
 ```
 
-<h4 id="instoll-2">
-    На постоянку
-<h4>
+#### На постоянку
 
 [Модулем](https://www.clearlinux.org/clear-linux-documentation/guides/kernel/kernel-modules.html)
 
-[В ядро](#include-to-kernel)
+[В ядро](#инклюд-в-ядро)
 
-<h3 id="change-nama">
-    Смена имени устройству
-<h3>
+### Смена имени устройству
 
 gore.c -> [DEVICE_NAME](https://github.com/nedokaka/linux-gore-driver/blob/main/gore.c#L8) замените на что вам нужно :>
 
-<h3 id="remove-fro,-kernel">
-    Удаление из ядра
-</h3>
+### Удаление из ядра
 
 В папке с ядром
 
 ```shell
-curl -LSs "https://raw.githubusercontent.com/nedokaka/linux-gore-driver/main/kernel/kernel-include.sh" | bash --cleanup
+curl -LSs "https://raw.githubusercontent.com/nedokaka/linux-gore-driver/main/linux/kernel-include.sh" | bash -s -- --cleanup
+
 ```
