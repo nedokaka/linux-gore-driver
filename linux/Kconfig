@@ -1,0 +1,5 @@
+menuconfig GORE
+	bool "Include gore"
+	default y
+	help
+	  include a gore driver 
